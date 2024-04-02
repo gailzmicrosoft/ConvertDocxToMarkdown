@@ -1,0 +1,27 @@
+# Python directory: C:\Users\{username}\AppData\Local\Programs\Python 
+# pip directorry: Python\Python311\Scripts
+# Python lib directory: C:\Users\{username}\AppData\Local\Programs\Python\Python311\Lib\site-packages
+
+# pip install -r {path}/requirements.txt
+# pip install -r requirements.txt
+
+# https://pypi.org/project/python-dotenv/
+# https://pypi.org/project/pypandoc/
+
+
+python-dotenv
+pandas
+colorama
+pypandoc
+pypandoc_binary # this will install runtime / binary of pandoc for windows
+#aspose-words
+
+
+
+
+
+
+
+
+
+
