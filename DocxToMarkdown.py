@@ -1,11 +1,11 @@
 
 ########################################################################################################################################################
 # Title: DocxToMarkdown.py
-# Author(s): Dr. Gail Zhou
-# Contributors: CoPiLot
-#
-# April 2024
-# Introduction: This script converts all .docx files in a directory to .md files.
+# Author(s): Dr. Gail Zhou & GitHub CoPiLot
+# Created: April 2024
+# Description: This script converts all .docx files in a directory to .md files. 
+# It also cleans the .md files by removing the lines that contain the patterns: "![](media", "width=", "height="
+# The script uses the pypandoc library to convert the .docx files to .md files.
 #######################################################################################################################################################
 import os  
 import shutil
@@ -20,6 +20,7 @@ import pypandoc
 from colorama import init as colorama_init
 from colorama import Fore
 
+#
 def main(): 
     colorama_init()
         
