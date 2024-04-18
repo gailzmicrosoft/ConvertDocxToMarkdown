@@ -1,11 +1,9 @@
 
 ########################################################################################################################################################
 # Title: MarkdownToDocx.py
-# Author(s): Dr. Gail Zhou
-# Contributors: CoPiLot
-#
-# April 2024
-# Introduction: This script converts all .docx files in a directory to .md files.
+# Author(s): Dr. Gail Zhou & Github Copilot
+# Created: April 2024
+# Description: This script converts all .docx files in a directory to .md files.
 #######################################################################################################################################################
 import os  
 import shutil
