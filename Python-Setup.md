@@ -1,6 +1,6 @@
 # Python Setup 
 
-Rename [.env.sample](.env.sample) to `.env`
+Rename [env_sample.txt](.env.sample) to `.env`
 
 Edit `.env` to add your environment variables 
 

@@ -108,7 +108,7 @@ def main():
                         with open(output_file_full_path, "w") as f:
                             for line in lines:
                                 # skip the line if it contains the pattern
-                                if not lineContainsPattern(line):
+                                if not lineContainsPatterns(line):
                                     f.write(line)
                         
                         print(f"{Fore.GREEN}      output: {output_file_full_path} {Fore.RESET}") 
@@ -121,7 +121,7 @@ def main():
         print(ex)
 
 
-def lineContainsPattern(line):
+def lineContainsPatterns(line):
     patterns = ["![](media", "width=", "height="]
     for pattern in patterns:
         if pattern in line:
