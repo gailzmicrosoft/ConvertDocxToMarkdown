@@ -1,8 +1,9 @@
+################################################################################################################################
 # Title: DocxToDocxRemoveImageLinks.py
 # Author(s): Dr. Gail Zhou & GitHub CoPiLot
 # Created: April 2024
 # Description: This script cleans all .docx files in a directory by removing the lines that contain specific patterns. 
-#######################################################################################################################################################
+################################################################################################################################
 import os  
 from docx import Document
 
