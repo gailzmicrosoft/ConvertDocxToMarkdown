@@ -41,3 +41,7 @@ Put all your .md files in one directory. The program will ask for below paths (`
 
 The final output .`docx` files will be stored in the path defined in 2 above.
 
+# 3 Docx Processing Only 
+
+`DocxToDocxRemoveImageLinks.py` and  `DocxToDocxTextReplacement.py` use a different python library to perform doc cleansing such as replacing names with fictitious names to protect sensitive data. Review env_sample.txt for environment variable definitions. 
+
