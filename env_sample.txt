@@ -1,0 +1,6 @@
+CLEAN_MD = True # Remove markdown image links from the output
+# Below are the settings for PII data replacement for two persons
+OLD_TEXT_1="William.Kirby\[ABCDEF\]"
+NEW_TEXT_1="Ethan Brooks (Officer)"
+OLD_TEXT_2="Grace Owens"
+NEW_TEXT_2="Mia Steele"
