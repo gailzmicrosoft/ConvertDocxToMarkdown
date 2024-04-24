@@ -1,7 +1,7 @@
 ####################################################################################################################### 
 # File: DocxToDocxTextReplacement.py
-# This code is not working as expected. It is not replacing the old text pattern with the new text pattern in the .docx files.
-# Description: This script replaces the old text pattern with the new text pattern in all .docx files in a directory.
+# Description: This script replaces the old text patterns with the new text patterns in all .docx files in a directory.
+# See env_sample.txt for the required environment variables.
 # Created: April 2024
 # Author(s): Dr. Gail Zhou & GitHub CoPiLot
 #######################################################################################################################
