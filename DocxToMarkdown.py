@@ -31,6 +31,7 @@ def main():
 
         # Normally the clean_md flag is set to True. If it is set to False, the script will not clean the markdown files.
         clean_md = os.getenv("CLEAN_MD")
+        clean_md_flag = False
         if (clean_md in ["True", "true", "TRUE", "T", "t", "Y", "y", "Yes", "yes", "YES"]):
             clean_md_flag = True
         else:
