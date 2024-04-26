@@ -41,9 +41,9 @@ Put all your .md files in one directory. The program will ask for below paths (`
 
 The final output .`docx` files will be stored in the path defined in 2 above.
 
-# 3 Docx Processing Only 
+# 3 Docx Processing Only (Input .docx, Output .docx)
 
-`DocxToDocxRemoveImageLinks.py`, no environment variables are needed. 
+`DocxToDocxRemoveImageLinks.py` removes image links and backslashes. No environment variables needed. 
 
- `DocxToDocxTextReplacement.py`.  Review env_sample.txt for environment variable definitions. Copy it as `.env` and edit to fit your needs. 
+`DocxToDocxTextReplacement.py`.  Replace a pair of old text phrases with new text. Review `env_sample.txt` for environment variable definitions. Copy it as `.env` and edit to fit your needs. 
 
