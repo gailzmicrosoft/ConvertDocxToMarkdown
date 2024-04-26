@@ -1,7 +1,7 @@
 # if you want to clean up the MD files 
 CLEAN_MD = True
 # Below are the settings for PII data replacement 
-OLD_TEXT_1="Forrester.Estelle\[DFVVPC\]"
-NEW_TEXT_1="Ethan Brooks (Officer)"
-OLD_TEXT_2="Mary Smith"
+OLD_TEXT_1="FirtName.LastName\[ABCD\]"
+NEW_TEXT_1="Ethan Brooks (Doctor)"
+OLD_TEXT_2="Jane Smith"
 NEW_TEXT_2="Mia Steele"
