@@ -8,6 +8,7 @@
 # The script uses the pypandoc library to convert the .docx files to .md files.
 #######################################################################################################################################################
 import os  
+import re # Regular Expression
 import shutil
 import pandas as pd
 from pathlib import Path
@@ -65,7 +66,7 @@ def main():
                     input_file_full_path = os.path.join(root, file_name) 
 
                     file_name_without_extension = Path(file_name).stem 
-                    output_file_name = f"{file_name_without_extension}_raw.md"
+                    output_file_name = f"{file_name_without_extension}.md"
                     output_file_full_path = os.path.join(raw_md_directory_path, output_file_name)
 
                     if not os.path.exists(input_file_full_path):
@@ -79,7 +80,7 @@ def main():
                     
                     if file_extention == '.docx':
                         print(f"{Fore.YELLOW}Processing {input_file_full_path}{Fore.RESET}")
-                        output = pypandoc.convert_file(input_file_full_path, 'md', outputfile=output_file_full_path)
+                        pypandoc.convert_file(input_file_full_path, 'md', outputfile=output_file_full_path)
                         print(f"{Fore.CYAN}    output: {output_file_full_path} {Fore.RESET}")
 
                     if file_extention == '.txt':
@@ -95,22 +96,24 @@ def main():
                 for file_name in files:
                     if file_name.endswith('.md'):
                         file_name_without_extension = Path(file_name).stem 
-                        clean_md_file_name = f"{file_name_without_extension}_clean.md"
+                        clean_md_file_name = f"{file_name_without_extension}.md"
                         
                         input_file_full_path = os.path.join(root, file_name) 
                         output_file_full_path = os.path.join(clean_output_directory_path, clean_md_file_name)
                         
                         print(f"{Fore.CYAN} input: {input_file_full_path} {Fore.RESET}")
                         
-                        # Process the file
+                        # Read the input file
                         with open(input_file_full_path, "r") as f:
                             lines = f.readlines()
+
                         with open(output_file_full_path, "w") as f:
                             for line in lines:
+                                # if line contains backslash, remove it
+                                newline = line.replace("\\", "")
                                 # skip the line if it contains the pattern
-                                if not lineContainsPatterns(line):
-                                    f.write(line)
-                        
+                                if not lineContainsPatterns(newline):
+                                    f.write(newline)
                         print(f"{Fore.GREEN}      output: {output_file_full_path} {Fore.RESET}") 
                         print("")
         
