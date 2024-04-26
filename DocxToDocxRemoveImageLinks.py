@@ -3,6 +3,7 @@
 # Author(s): Dr. Gail Zhou & GitHub CoPiLot
 # Created: April 2024
 # Description: This script cleans all .docx files in a directory by removing the lines that contain specific patterns. 
+# It also removes the backslashes. The cleaned files are saved in the output directory.
 ################################################################################################################################
 import os  
 import re # Regular Expression
