@@ -5,6 +5,7 @@
 # Description: This script cleans all .docx files in a directory by removing the lines that contain specific patterns. 
 ################################################################################################################################
 import os  
+import re # Regular Expression
 from docx import Document
 
 
@@ -23,11 +24,10 @@ def clean_docx(input_file_path, output_dir):
     for paragraph in doc.paragraphs:
         # Split the paragraph into lines
         lines = paragraph.text.split('\n')
-
-        # Remove lines that contain the pattern
-        #lines = [line for line in lines if "media" not in line]
+        # Remove the backslashes
+        lines = [line.replace("\\","") for line in lines]
+        # Remove lines that contain the patterns
         lines = [line for line in lines if not lineContainsPatterns(line)]
-
         # Join the remaining lines back together
         paragraph.text = '\n'.join(lines)
 
